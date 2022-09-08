@@ -1,0 +1,38 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    text-align: center;
+}
+
+h1{
+    font-size: 3em;
+}
+
+#principal{
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    height: 30px;
+    border-radius: 20px;
+}
+
+button{
+    border-radius: 20px;
+    background: rebeccapurple;
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin: 1rem;
+    font-weight: bold;
+}
