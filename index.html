@@ -7,27 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <title>Agregando eventos</title>
+    <link rel="stylesheet" href="style.css"/>
+    <title>eventos</title>
   </head>
   <body>
-    <h1>Celsius a Fahrenheit</h1>
-    <div id="principal">
-      <div>
-        <h2>Celsius</h2>
-        <input type="number" name="celsius" id="celsius" placeholder="0"/>
-      </div>
-      <div>
-        <h2>Fahrenheit</h2>
-        <input type="number" name="fahrenheit" id="fahrenheit" placeholder="32"/>
-      </div>
-    </div>
-    <button id="boton">Calcular</button>
+    <h1> Convertidor de divisas </h1>
     <div>
-      <button id="historial">Historial</button>
-      <div>
-        <p id="textoHistorial"></p>
-      </div>
+      <h2>Inicie sesión</h2>
+      <form action="" id="login">
+        <label for="user">
+          <input type="text" name="user" id="user" placeholder="Usuario">
+        </label>
+        <label for="password">
+          <input type="password" name="password" id="password" placeholder="Contraseña">
+        </label>
+        <button type="submit" id="button" >Iniciar sesión</button>
+      </form>
+      <button id="showToken">Mostrar token</button>
+    </div>
+    <div id="tokenContainer"> </div>
+    <div class="hidden" id="privateContent">
+      <h3>Ha iniciado sesión correctamente</h3>
+      <a href="./conversor.html">Conversor de divisas</a>
     </div>
     <script src="index.js"></script>
   </body>

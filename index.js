@@ -1,21 +1,45 @@
-const celsius = document.getElementById('celsius');
-const fahrenheit = document.getElementById('fahrenheit');
-const boton = document.getElementById('boton')
-
-let historial = []
-
-function calcular(){
-   let resultado = fahrenheit.value = celsius.value * 1.8 + 32
-   historial.unshift(resultado)
+//función para generar un token
+function generateToken(usuario, contraseña) {
+  return usuario + contraseña;
 }
 
-boton.addEventListener('click', calcular)
-
-const btnHistorial = document.getElementById('historial');
-const textoHistorial = document.getElementById('textoHistorial');
-
-function mostrar(){
-    textoHistorial.innerText = historial
+//función para logearse
+function login(event){
+    event.preventDefault()
+    let user = document.getElementById('user').value
+    let password = document.getElementById('password').value;
+    console.log(user)
+    console.log(password)
+    if (user !== null && password !== null) {
+    let token = generateToken(user, password);
+    localStorage.setItem("token", token);
+    }
+    const theresAToken = tokenExists();
+    if(theresAToken){
+        const hiddenDiv = document.getElementById('privateContent')
+        hiddenDiv.className = "showContent"
+    }
 }
 
-btnHistorial.addEventListener('click', mostrar)
+//función para saber si se ha generado un token
+function tokenExists() {
+    if(localStorage.getItem('token') !== null){
+        return true;
+    } else {
+        false;
+    }
+}
+//evento botón para logearse
+button.addEventListener('click', login)
+
+//guardo elementos del HTML en constantes
+const showTokenbtn = document.getElementById('showToken')//botón mostrar token
+const tokenContainer = document.getElementById('tokenContainer')//container de token
+
+//función para mostrar token
+function showToken(){
+    tokenContainer.innerText = localStorage.getItem('token')
+}
+
+//evento mostrar token
+showTokenbtn.addEventListener('click', showToken)
