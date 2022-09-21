@@ -14,8 +14,11 @@
     <button id="return"> Volver a la página anterior </button>
     <h1> Bienvenido </h1>
     <div>
-        <p>Dólar estadounidense</p>
-        <input type="number" id="dolarInput">
+        <select name="select" id="select">
+            <option value="usd">USD</option>
+            <option value="euro">Euro</option>
+        </select>
+        <input type="number" id="monedaInput">
     </div>
     <div>
         <p>Peso argentino</p>
@@ -24,6 +27,8 @@
     <div class="buttons">
         <button id="calcular">Calcular</button>
         <button id="showHistory">Mostrar historial</button>
+        <button id="tipoDeOperacion">Ultimo tipo de operación</button>
+        <button id="ultimoResultado">Ultimo resultado</button>
     </div>
     <div id="historyContainer"></div>
     <script src="./index2.js"></script>
