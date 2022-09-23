@@ -14,6 +14,14 @@ function login(event){
     let token = generateToken(user, password);
     localStorage.setItem("token", token);
     }
+    Swal.fire({
+        title: "Iniciaste sesión",
+        text: "¡Ya podés usar el conversor!",
+        icon: "success",
+        confirmButtonColor: "#B1B2FF",
+        color:"#000000"
+    }
+      )
     const theresAToken = tokenExists();
     if(theresAToken){
         const hiddenDiv = document.getElementById('privateContent')
@@ -31,15 +39,3 @@ function tokenExists() {
 }
 //evento botón para logearse
 button.addEventListener('click', login)
-
-//guardo elementos del HTML en constantes
-const showTokenbtn = document.getElementById('showToken')//botón mostrar token
-const tokenContainer = document.getElementById('tokenContainer')//container de token
-
-//función para mostrar token
-function showToken(){
-    tokenContainer.innerText = localStorage.getItem('token')
-}
-
-//evento mostrar token
-showTokenbtn.addEventListener('click', showToken)
