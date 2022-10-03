@@ -1,34 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
-    <title>eventos</title>
-  </head>
-  <body>
-    <h1> Convertidor de divisas </h1>
-    <div>
-      <h2>Inicie sesión</h2>
-      <form action="" id="login">
-        <label for="user">
-          <input type="text" name="user" id="user" placeholder="Usuario">
-        </label>
-        <label for="password">
-          <input type="password" name="password" id="password" placeholder="Contraseña">
-        </label>
-        <button type="submit" id="button" >Iniciar sesión</button>
-      </form>
-    </div>
-    <div id="tokenContainer"> </div>
-    <div class="hidden" id="privateContent">
-      <a href="./conversor.html">Conversor de divisas</a>
-    </div>
-    <script src="index.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title> Pokémon </title>
+</head>
+<body>
+  <h1> Pokémon </h1>
+  <p>Ingrese el número de pokemones que desea visualizar siendo 50 la cantidad máxima.</p>
+  <input type="number" name="cantidad" id="cantidad"><!-- campo para ingresar la cantidad de nombres que se deben mostrar-->
+  <button id="confirm">OK</button><!-- botón para confirmar-->
+  <button id="reset"> Reset </button><!-- botón para resetear-->
+  <div id="container"><!-- div vacío para contener a los divs en los cuales van los nombres de cada pokémon-->
+  </div>
+  <script src="./index.js"></script>
+</body>
 </html>
